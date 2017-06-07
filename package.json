@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "vuetify": "latest",
-    "mongodb": "^2.2.26"
+    "mongodb": "^2.2.26",
+    "mysql": "^2.13.0"
   }
 }

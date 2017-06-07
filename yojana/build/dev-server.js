@@ -59,6 +59,21 @@ MongoClient.connect('mongodb://thisDOTnameDB:0ld.Traff0rd@tdn-cluster0-shard-00-
 });
 
 
+var mysql = require('mysql')
+var connection = mysql.createConnection({
+  host: 'localhost',
+  user: 'root',
+  password: 'helloworld',
+  database: 'foo'
+})
+
+connection.connect()
+connection.query('SELECT * FROM bar', function (error, results, fields) {
+  if (error) throw error
+  console.log('DB RESPONSE :: ', typeof(results[0]), results)
+})
+connection.end()
+
 
 var devMiddleware = require('webpack-dev-middleware')(compiler, {
   publicPath: webpackConfig.output.publicPath,
